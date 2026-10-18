@@ -10,7 +10,7 @@
 ![Windows](https://img.shields.io/badge/Windows-10%20%7C%2011%20x64-0078D6?logo=windows&logoColor=white)
 ![GPU](https://img.shields.io/badge/GPU-NVIDIA%20%7C%20AMD%20%7C%20CPU-555)
 
-[**최신 버전 내려받기**](https://github.com/Gomtanga/SORI/releases/latest) · [변경 내역](https://github.com/Gomtanga/SORI/releases)
+[**최신 버전 내려받기**](https://github.com/Gomtanga/SORI/releases/latest) · [변경 내역](https://github.com/Gomtanga/SORI/releases) · [English](README.en.md)
 
 <img src="docs/images/live.png" width="760" alt="실시간 자막 화면">
 
@@ -34,7 +34,7 @@
 2. Windows가 "알 수 없는 게시자"라고 경고하면 **추가 정보 → 실행**을 누릅니다(자체 서명 인증서라서 나오는 경고입니다).
 3. 처음 쓰는 모델은 크기와 출처를 보여 주고 확인을 받은 뒤 내려받습니다.
 
-Python은 설치 파일에 들어 있어 따로 설치할 필요가 없습니다. 기록과 모델은 `%LOCALAPPDATA%\SORI`에 저장되며, 앱을 지우거나 업데이트해도 남습니다.
+Python은 설치 파일에 들어 있어 따로 설치할 필요가 없습니다. 기록과 모델은 `%LOCALAPPDATA%\SORI`에 저장되며, 앱을 지우거나 업데이트해도 남습니다. 화면 언어(한국어·English)는 **설정 → 화면 언어**에서 바꿀 수 있습니다.
 
 ## 업데이트
 
@@ -78,18 +78,6 @@ $sori = "$env:LOCALAPPDATA\Programs\SORI\sori-cli.exe"
 & $sori transcribe "C:\media\lecture.mp4" --format srt -o "C:\media\lecture.srt"
 & $sori search "공용 와이파이에서 통신을 암호화하는 방법"
 ```
-
-<details>
-<summary><b>English</b></summary>
-
-**SORI** is a local transcription app for Windows. It shows live captions for system audio, transcribes recordings and videos sentence by sentence, and searches saved transcripts by meaning. It runs Whisper and Qwen3-ASR models on NVIDIA or AMD GPUs or the CPU. Audio and transcripts never leave your PC.
-
-- **Install**: download `SORI-Setup-<version>-x64.exe` from [Releases](https://github.com/Gomtanga/SORI/releases/latest). If Windows shows "Unknown publisher" (self-signed certificate), choose **More info → Run anyway**.
-- **Updates**: 0.5.1 or later updates itself with one click. From 0.5.0 or earlier, install the latest release manually once.
-- **AMD**: Whisper models use Vulkan; Komix and Qwen3-ASR on Radeon RX 7000/9000 need Windows 11 and AMD driver 26.2.2 or later, and SORI installs AMD's PyTorch for ROCm (about 2.2 GB) when first needed. Check with `sori-cli gpu-check`. The AMD paths have not been confirmed on a real Radeon yet.
-- **Verify**: each release ships `release-manifest.json` (version, size, SHA-256, signer thumbprint `F4E057B9644DBFB499AD2B3E8508F104EEB5022C`).
-
-</details>
 
 ---
 
