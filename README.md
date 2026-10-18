@@ -7,7 +7,6 @@
 **Windows용 로컬 전사 앱 · 실시간 자막, 파일 전사, 뜻으로 찾기**
 
 [![Release](https://img.shields.io/github/v/release/Gomtanga/SORI?label=release&color=3ddc97)](https://github.com/Gomtanga/SORI/releases/latest)
-[![Downloads](https://img.shields.io/github/downloads/Gomtanga/SORI/total?color=3ddc97)](https://github.com/Gomtanga/SORI/releases)
 ![Windows](https://img.shields.io/badge/Windows-10%20%7C%2011%20x64-0078D6?logo=windows&logoColor=white)
 ![GPU](https://img.shields.io/badge/GPU-NVIDIA%20%7C%20AMD%20%7C%20CPU-555)
 
@@ -65,7 +64,7 @@ Python은 설치 파일에 들어 있어 따로 설치할 필요가 없습니다
 릴리스마다 `release-manifest.json`이 함께 올라갑니다. 버전, 크기, SHA-256, 서명자 지문이 들어 있습니다.
 
 ```powershell
-Get-FileHash .\SORI-Setup-0.5.3-x64.exe -Algorithm SHA256
+Get-FileHash .\SORI-Setup-*-x64.exe -Algorithm SHA256
 ```
 
 서명 인증서 지문: `F4E057B9644DBFB499AD2B3E8508F104EEB5022C`. 앱 안의 업데이트는 SHA-256, 손상되지 않은 서명, 이 지문, 설치 파일의 버전 정보가 모두 맞을 때만 설치합니다.
